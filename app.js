@@ -1,6 +1,8 @@
 var express = require('express'); //引入express框架
 var path = require('path');
-var mongoose = require('mongoose');
+var session = require('express-session');
+var mongoose = require('mongoose')
+var mongoStore = require('connect-mongo')(session)
 var logger = require('morgan');
 var port = process.env.PORT || 3000;
 var app = express();
@@ -29,8 +31,7 @@ if ('development' === app.get('env')) {
 	mongoose.set('debug',true)
 }
 
-require('./config/routers')(app)
+require('./config/routers')(app);
 app.listen(port)
 
-
-console.log('started')
+console.log('service started')
