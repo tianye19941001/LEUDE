@@ -11,7 +11,7 @@ var dbUrl = 'mongodb://localhost/lejuUDE';
 mongoose.connect(dbUrl);
 
 app.set('views','./app/views/pages');
-app.set('views engine','jade');
+app.set('view engine','jade');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname,'public')));
 app.use(require('connect-multiparty')());
@@ -32,6 +32,6 @@ if ('development' === app.get('env')) {
 }
 
 require('./config/routers')(app);
-app.listen(port)
+app.listen(port);
 
-console.log('service started')
+console.log('service started');
