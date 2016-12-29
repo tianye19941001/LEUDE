@@ -1,3 +1,9 @@
 header
 	h1(class="ty_h1")
 		a(href="/") LEUDE
+	.ty_someone
+		if user
+			span 欢迎您,#{user.name}
+		else
+			a(href="/signin") 登录
+			a(href="/signup") 注册

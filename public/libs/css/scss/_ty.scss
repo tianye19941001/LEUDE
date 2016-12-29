@@ -3,9 +3,12 @@ html,body{ font-family: "微软雅黑"; min-width: 1200px; }
 body{ background: #eee; }
 %positionCenter{ position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); }
 %ty_oh{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-header{ height: 100px; line-height: 100px; text-align: center; color: #999; font-size: 50px; background: #2a2a2a; overflow: hidden;
-	a{ color: #999; display: inline-block; animation: big 4s .5s linear infinite; -webkit-animation: big 4s .5s linear infinite;
+header{ height: 100px; line-height: 100px; text-align: center; color: #999; font-size: 50px; background: #2a2a2a; overflow: hidden; position: relative;
+	h1 a{ color: #999; display: inline-block; animation: big 4s .5s linear infinite; -webkit-animation: big 4s .5s linear infinite;
 		&:hover{ color: #fff; }
 	}
 }
 .ty_con{ width: 1200px; margin: 0 auto; }
+.ty_someone{ position: absolute; top: 0; right: 0; color: #fff; font-size: 16px; padding-right: 30px; width: 200px;
+	a{ color: #fff; margin-left: 10px; }
+}
